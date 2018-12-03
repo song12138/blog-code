@@ -1,0 +1,10 @@
+spring:
+  rabbitmq:
+    addresses: 110.110.110.110:5672
+    virtual-host: test
+    username: guest
+    password: guest
+    publisher-confirms: true #开启发送确认
+    publisher-returns: true #开启发送失败退回
+    listener: 
+      acknowledge-mode: MANUAL #开启消费ACK模式

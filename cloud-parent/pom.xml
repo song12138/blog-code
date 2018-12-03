@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>me.laoyuan</groupId>
+	<artifactId>cloud-parent</artifactId>
+	<version>0.0.1</version>
+	<packaging>pom</packaging>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.9.RELEASE</version>
+	</parent>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Edgware.SR1</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<modules>
+		<module>reg-center-server</module>
+		<module>config-server</module>
+		<module>gateway-server</module>
+		<module>micro-service-a-server</module>
+		<module>micro-service-b-server</module>
+		<module>hystrix-microservice</module>
+		<module>hystrix-dashboard</module>
+		<module>hystrix-turbine</module>
+		<module>hystrix-command-service</module>
+	</modules>
+</project>

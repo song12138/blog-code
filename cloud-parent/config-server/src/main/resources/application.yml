@@ -1,0 +1,16 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          #配置文件Git仓库地址
+          uri: git://git.coding.net/yuanxin/blog-code.git
+          search-paths: cloud-parent/config-repo,cloud-parent/config-repo/{application}
+          #仓库需认证，则填写用户名
+          username: 
+          #仓库需认证，则填写密码
+          password: 
